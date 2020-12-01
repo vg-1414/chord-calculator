@@ -1,3 +1,22 @@
 
 * Chord calculator
 
+This is a simple tool that returns note names for chords based on your
+input.  It can optionally return frequencies for those notes, as well.
+
+Simply running ~main.py~ will begin the program:
+
+#+BEGIN_SRC sh
+
+  python3 main.py
+
+#+END_SRC
+
+[[./images/chord-calculator-01.png]]
+
+[[./images/chord-calculator-02.png]]
+
+[[./images/chord-calculator-03.png]]
+
+You can loop as many times as you would like and you can also export
+the chord tones/frequencies to a file for later reference.
