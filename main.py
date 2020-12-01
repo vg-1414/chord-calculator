@@ -2,10 +2,8 @@
 # Import the custom calcmod module.
 import calcmod
 
-# Function: The primary main() wrapper to house the complete program.
-# Input: none.
-# Output: the entire program.
 def main():
+    """Primary program wrapper."""
 
     # Welcome the user to the program and give a brief description.
     calcmod.print_welcome_message()
@@ -57,8 +55,7 @@ def main():
         # Ask the user if they would like to export the results.
         calcmod.export_results(final_results)
 
-        # Determine whether to continue or exit the program,
-        # using a while loop to validate input.
+        # Determine whether to continue or exit the program using a while loop to validate input.
         run_again_answer = ""
         while len(run_again_answer) < 1:
             answer = input("Would you like to calculate another chord?  Please enter 'y' or 'n': ")
