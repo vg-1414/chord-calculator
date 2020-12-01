@@ -8,7 +8,7 @@ Simply running ~main.py~ will begin the program:
 
 #+BEGIN_SRC sh
 
-  python3 main.py
+  ~/ $ python3 main.py
 
 #+END_SRC
 
@@ -20,3 +20,9 @@ Simply running ~main.py~ will begin the program:
 
 You can loop as many times as you would like and you can also export
 the chord tones/frequencies to a file for later reference.
+
+** Dominant alteration
+
+The dominant seventh chord will allow you to create a few basic alterations:
+
+[[./images/chord-calculator-04.png]]
