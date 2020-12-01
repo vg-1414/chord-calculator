@@ -232,10 +232,8 @@ def pick_chord_type():
 
     return chord_type
 
-# Function: update dominant chord tones.
-# Input: none.
-# Output: updated intervals for the dominant chord.
 def update_dominant_chord():
+    """Allows the user to modify the tones in a dominant chord."""
 
     import calcmod
 
@@ -345,10 +343,8 @@ def update_dominant_chord():
 
     return alteration, extension
 
-# Function: sort a list to generate a scale.
-# Input: user selected root note value.
-# Output: a properly sorted list that reflects a chromatic scale.
 def sort_chromatic_scale(root_note):
+    """Sorts the chromatic_scale list to line up with the user's root note."""
 
     # Use the 'A' chromatic scale as a starting point.
     chromatic_scale = ['A', 'A#/Bb', 'B', 'C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab']
@@ -368,10 +364,8 @@ def sort_chromatic_scale(root_note):
     # Return the chromatic scale
     return chromatic_scale
 
-# Function: calculate the correct notes from a chromatic scale.
-# Input: a chromatic scale and a chord type.
-# Output: a list containing the notes that the user requested.
 def extract_chord_tones(chromatic_scale, chord_type, dominant_updates = ""):
+    """Extracts the correct notes based on the user's input."""
 
     # Cheat sheet for the chromatic chord
     # tones and their element positions.
@@ -504,10 +498,8 @@ while x < 13:
 
     x = x + 1
 
-# Function: calculate all requested frequencies.
-# Input: the user's specified chord tones.
-# Output: a collection of lists that contain each note's frequency values from octave ranges 1 through 7.
 def calculate_frequencies(chord_tones):
+    """Calculates the Hertz values for the selected chord tones."""
 
     # Use a C chromatic scale to line up our notes with the octave1_static list.
     c_chromatic_scale = ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B']
@@ -529,10 +521,8 @@ def calculate_frequencies(chord_tones):
 
     return chord_frequencies
 
-# Function: determine if user wants to calculate frequencies.
-# Input: the chord_tones list.
-# Output: frequencies (or "nah") stored in chord_frequencies
 def include_frequencies(chord_tones):
+    """Gives the user the option to calculate Hertz values."""
 
     import calcmod
 
@@ -552,10 +542,8 @@ def include_frequencies(chord_tones):
 
     return chord_frequencies
 
-# Function: display the results on the screen.
-# Input: all user input and program calculations.
-# Output: a pretty display of notes, and possibly their frequencies, stored in final_results.
-def print_results(root_note, chromatic_scale, chord_type, chord_tones, chord_frequencies, dominant_updates = ""):
+def return_results(root_note, chromatic_scale, chord_type, chord_tones, chord_frequencies, dominant_updates = ""):
+    """Returns the final chord results based on the user's input."""
 
     # Format the chromatic_scale list as a space-separated string.
     chromatic_scale_string = ' '.join(chromatic_scale)
@@ -586,10 +574,8 @@ def print_results(root_note, chromatic_scale, chord_type, chord_tones, chord_fre
     # Return the results in case the user wants to save them to file.
     return final_results
 
-# Function: export the results to a text file.
-# Input: the final_results string from print_results()
-# Output: the chord-results.txt file.
 def export_results(final_results):
+    """Exports the results to a file."""
 
     # Use a loop to make sure we get valid input.
     export_answer = ""

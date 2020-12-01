@@ -47,9 +47,9 @@ def main():
         # First check if any dominant updates are available.
         if "dominant_updates" in locals():
             # If so, specify them as an argument.
-            final_results = calcmod.print_results(root_note, chromatic_scale, chord_type, chord_tones, chord_frequencies, dominant_updates)
+            final_results = calcmod.return_results(root_note, chromatic_scale, chord_type, chord_tones, chord_frequencies, dominant_updates)
         else:
-            final_results = calcmod.print_results(root_note, chromatic_scale, chord_type, chord_tones, chord_frequencies)
+            final_results = calcmod.return_results(root_note, chromatic_scale, chord_type, chord_tones, chord_frequencies)
 
         # Print out the results on the screen.
         print(final_results)
